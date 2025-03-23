@@ -1,16 +1,22 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 const logos = [
-  'fox.svg',
-  'lonelyplanet.svg',
-  'intuit.svg',
-  'carvana.svg',
-  'kiva.svg',
-  'target.svg',
-  'devacurl.svg',
+  { name: "fox", color: "#270860" },
+  { name: "lonelyplanet", color: "#5b19d7" },
+  { name: "intuit", color: "#8e67d6" },
+  { name: "carvana", color: "#d0942d" },
+  { name: "kiva", color: "#ae0d0d" },
+  { name: "target", color: "#f80b0b" },
+  { name: "devacurl", color: "#99c213" },
+  { name: "fox", color: "#270860" },
+  { name: "lonelyplanet", color: "#5b19d7" },
+  { name: "intuit", color: "#8e67d6" },
+  { name: "carvana", color: "#d0942d" },
+  { name: "kiva", color: "#ae0d0d" },
+  { name: "target", color: "#f80b0b" },
+  { name: "devacurl", color: "#99c213" },
 ];
 
 export default function LogoSlider() {
@@ -33,21 +39,17 @@ export default function LogoSlider() {
   }, []);
 
   return (
-    <div className="bg-[#F4EDE4] py-8 overflow-hidden">
-      <div className="w-full overflow-hidden">
+    <div className="bg-[#F4EDE4] py-8 overflow-hidden ">
+      <div className="w-full overflow-hidden max-w-7xl mx-auto flex">
         <div
           ref={sliderRef}
           className="flex gap-16 animate-scroll whitespace-nowrap"
         >
-          {[...logos, ...logos].map((logo, index) => (
+          {logos?.map((logo, index) => (
             <div key={index} className="flex-shrink-0">
-              <Image
-                src={`/logos/${logo}`}
-                alt={logo.replace('.svg', '')}
-                width={100}
-                height={40}
-                className="h-8 object-contain"
-              />
+              <div className={`text-[${logo?.color}] text-3xl`}>
+                {logo?.name}
+              </div>
             </div>
           ))}
         </div>
