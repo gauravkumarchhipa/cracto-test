@@ -10,7 +10,7 @@ const CookieConsent = () => {
   return (
     <div className="bg-white fixed bottom-6 right-6 z-50 space-y-2">
       {/* Cookie Modal */}
-      <div className="bg-white shadow-xl rounded-md p-4 w-80 text-sm relative">
+      <div className="bg-white p-4 w-80 text-sm relative">
         <button
           className="absolute top-2 right-2 text-gray-500 hover:text-black"
           onClick={() => setVisible(false)}
@@ -33,7 +33,7 @@ const CookieConsent = () => {
       </div>
 
       {/* Chat Teaser */}
-      <div className="flex items-center bg-white shadow-md rounded-full px-3 py-2 w-max max-w-xs">
+      <div className="flex items-center bg-white  px-3 py-2 w-max max-w-xs">
         <button
           className="text-xs text-gray-400 mr-2"
           onClick={() => setVisible(false)}
