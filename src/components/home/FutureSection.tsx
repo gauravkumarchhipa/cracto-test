@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const FutureSection = () => {
   return (
     <section className="bg-[#F4EDE4] py-12 px-6">
