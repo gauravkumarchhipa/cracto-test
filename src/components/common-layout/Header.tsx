@@ -83,10 +83,12 @@ const Header = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 text-sm font-medium text-[#1d1c1d]">
-          <Link href="#">Product</Link>
-          <Link href="#">Enterprise</Link>
-          <Link href="#">Resources</Link>
-          <Link href="#">Pricing</Link>
+          <div className="flex flex-row">
+            <Link href="#">Product</Link>
+            <Link href="#">Enterprise</Link>
+            <Link href="#">Resources</Link>
+            <Link href="#">Pricing</Link>
+          </div>
           <hr />
           <Link href="#">Sign in</Link>
           <Link href="#" className="block text-[#611f69]">

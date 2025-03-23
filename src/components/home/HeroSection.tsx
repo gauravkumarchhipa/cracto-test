@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { GoogleIcon } from "../icons/googleicon";
 import SlackMock from "./SlcackMick";
 
