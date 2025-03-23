@@ -1,18 +1,21 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import SlackIcon from "../icons/slackicon";
+import { SearchIcon } from "../icons/searchicon";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#F4EDE4] border-b border-gray-200">
+    <header className="bg-[#F4EDE4]  border-gray-200">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
-        {/* Left: Logo + Nav */}
         <div className="flex items-center gap-8">
           <Link href="/">
-            <Image src="/slack-logo.svg" alt="Slack" width={100} height={30} />
+            <div className="flex gap-2 justify-center items-center">
+              <SlackIcon />
+              <div className="text-xl font-extrabold">slack</div>
+            </div>
           </Link>
 
           <nav className="hidden md:flex gap-6 text-sm font-medium text-[#1d1c1d]">
@@ -23,9 +26,10 @@ const Header = () => {
           </nav>
         </div>
 
-        {/* Right: Actions */}
         <div className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <button className="text-[#1d1c1d] hover:text-[#611f69]">🔍</button>
+          <button>
+            <SearchIcon className="w-5 h-5" />
+          </button>
           <Link href="#" className="hover:underline">
             Sign in
           </Link>
