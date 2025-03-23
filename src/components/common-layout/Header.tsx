@@ -83,7 +83,7 @@ const Header = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 text-sm font-medium text-[#1d1c1d]">
-          <div className="flex flex-row">
+          <div className="flex flex-col">
             <Link href="#">Product</Link>
             <Link href="#">Enterprise</Link>
             <Link href="#">Resources</Link>
