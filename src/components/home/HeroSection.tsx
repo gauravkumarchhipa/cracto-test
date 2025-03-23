@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { GoogleIcon } from "../icons/googleicon";
+import SlackMock from "./SlcackMick";
 
 export default function Hero() {
   return (
@@ -28,27 +29,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-        {/* Right Image (mocked) */}
-        <div className="relative w-full max-w-xl">
-          <Image
-            src="/slack-ui-mock.png"
-            alt="Slack UI"
-            width={600}
-            height={400}
-            className="rounded-lg shadow-lg"
-          />
-          {/* Emoji badges */}
-          <span className="absolute top-[-10px] right-14 bg-white rounded-full px-3 py-1 text-sm shadow">
-            👍 3
-          </span>
-          <span className="absolute bottom-16 left-[-10px] bg-white rounded-full px-3 py-1 text-sm shadow">
-            🎉 5
-          </span>
-          <span className="absolute top-1/3 right-[-10px] bg-white rounded-full px-3 py-1 text-sm shadow">
-            💡 8
-          </span>
-        </div>
+        <SlackMock />
       </div>
     </section>
   );

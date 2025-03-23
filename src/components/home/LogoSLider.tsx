@@ -47,7 +47,7 @@ export default function LogoSlider() {
         >
           {logos?.map((logo, index) => (
             <div key={index} className="flex-shrink-0">
-              <div className={`text-[${logo?.color}] text-3xl`}>
+              <div className="text-3xl" style={{ color: logo.color }}>
                 {logo?.name}
               </div>
             </div>
