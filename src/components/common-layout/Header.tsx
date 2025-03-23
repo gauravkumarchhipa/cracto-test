@@ -1,9 +1,7 @@
-// components/Navbar.tsx
-'use client';
-
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,19 +16,19 @@ const Header = () => {
           </Link>
 
           <nav className="hidden md:flex gap-6 text-sm font-medium text-[#1d1c1d]">
-            <Link href="#">Product</Link>
-            <Link href="#">Enterprise</Link>
-            <Link href="#">Resources</Link>
-            <Link href="#">Pricing</Link>
+            <Link href="/product">Product</Link>
+            <Link href="/enterprise">Enterprise</Link>
+            <Link href="/resources">Resources</Link>
+            <Link href="/pricing">Pricing</Link>
           </nav>
         </div>
 
         {/* Right: Actions */}
         <div className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <button className="text-[#1d1c1d] hover:text-[#611f69]">
-            🔍
-          </button>
-          <Link href="#" className="hover:underline">Sign in</Link>
+          <button className="text-[#1d1c1d] hover:text-[#611f69]">🔍</button>
+          <Link href="#" className="hover:underline">
+            Sign in
+          </Link>
           <Link
             href="#"
             className="px-4 py-2 border border-[#611f69] text-[#611f69] rounded hover:bg-[#f1e4f4]"
@@ -63,8 +61,13 @@ const Header = () => {
           <Link href="#">Pricing</Link>
           <hr />
           <Link href="#">Sign in</Link>
-          <Link href="#" className="block text-[#611f69]">Talk to Sales</Link>
-          <Link href="#" className="block bg-[#611f69] text-white px-4 py-2 rounded">
+          <Link href="#" className="block text-[#611f69]">
+            Talk to Sales
+          </Link>
+          <Link
+            href="#"
+            className="block bg-[#611f69] text-white px-4 py-2 rounded"
+          >
             Try for Free
           </Link>
         </div>

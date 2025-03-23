@@ -1,5 +1,3 @@
-
-import Footer from "@/components/common-layout/Footer";
 import Header from "@/components/common-layout/Header";
 import React from "react";
 
@@ -12,7 +10,6 @@ export default function layout({
     <>
       <Header />
       {children}
-      <Footer />
     </>
   );
 }
